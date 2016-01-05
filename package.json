@@ -1,0 +1,14 @@
+{
+  "name": "request_head_parserms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "4.13.3"
+  },
+  "author": "diegoingaramo",
+  "license": "MIT"
+}
