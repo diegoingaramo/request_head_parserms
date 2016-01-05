@@ -4,8 +4,11 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 app.get("/api/whoami", function(req, res) {
+    /* ip */
+    var ip = req.connection.remoteAddress;
+
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({result:'/api/whoami'}));
+    res.end(JSON.stringify({ipaddress:ip,language:"es-ES",software:"X11; Linux x86_64"}));
 });
 
 app.get(/.*/, function(req, res) {
