@@ -5,17 +5,6 @@ app.set('port', (process.env.PORT || 5000));
 
 app.get("/api/whoami", function(req, res) {
 
-    console.log('User-Agent: ' + req.headers);
-
-    for(var propertyName in req.headers) {
-        console.log(propertyName + ": " + req.headers[propertyName]);
-    }
-
-    console.log("USER AGENT");
-    for(var propertyName in req.headers["User-Agent"]) {
-        console.log(propertyName + ": " + req.headers["User-Agent"][propertyName]);
-    }    
-
     /* ip */
     var ip = req.headers['x-forwarded-for'] || 
      req.connection.remoteAddress || 
